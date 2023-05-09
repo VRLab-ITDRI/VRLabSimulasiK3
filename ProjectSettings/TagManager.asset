@@ -11,11 +11,13 @@ TagManager:
   - button f2
   - button f1
   - button f6
+  - Water
+  - Fire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Fire
+  - 
   - Water
   - UI
   - 
