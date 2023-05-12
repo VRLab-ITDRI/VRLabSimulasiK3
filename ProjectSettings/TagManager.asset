@@ -13,6 +13,7 @@ TagManager:
   - button f6
   - Water
   - Fire
+  - Hands
   layers:
   - Default
   - TransparentFX
