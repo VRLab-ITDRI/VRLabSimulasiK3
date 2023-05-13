@@ -6,8 +6,20 @@ public class Extinguisher : MonoBehaviour
 {
     public GameObject pressuredWater;
 
-    public void PinDislocated()
+    private void Start()
     {
-        pressuredWater.SetActive(true);
+        //pressuredWater.SetActive(false);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Hands"))
+        {
+            pressuredWater.SetActive(true);
+        }
+        else
+        {
+            //pressuredWater.SetActive(false);
+        }
     }
 }
