@@ -23,15 +23,32 @@ public class VRLabAudioSpacial : MonoBehaviour
         
     }
 
-    private void OnCollisionStay(Collision collision)
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        audioSource.Play();
+    //    }
+    //    else
+    //    {
+    //        audioSource.Stop();
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Player"))
+        if (other.tag == "Player")
         {
 #if UNITY_EDITOR
-            audioSource.Play();
+            Debug.Log("KELUAR AH AH!!");
 #endif
+            audioSource.Play();
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
         {
             audioSource.Stop();
         }
